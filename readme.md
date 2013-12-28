@@ -14,18 +14,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 How to use
 
-1) Setup your SEMRush API Key, you may generate one [here](http://www.semrush.com/api.html), you must set the API Key in the SemRush.php file
+1) Include your SEMRush API Key. To do this, you must set the API Key in the SemRush.php file
 
 protected $apikey='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-2) include the file, and call one of reporting functions, you can also use the callReport function to give other export columns determined in the [SEMRush API] (http://www.semrush.com/api.html)
+2) Include the file, and call one of reporting functions, you can also use the callReport function to give other export columns determined in the [SEMRush API] (http://www.semrush.com/api.html)
 
 include_once('SemRush.php');
 
-$s = new SemRush('http://pmg.co');
+$s = new SemRush('http://slickwp.com');
 echo "Main Report: ";
 print_r($s->getMainReport());
 
 //you can also use the SEMRush PHP API to call different types of reports not listed
 print_r($s->callReport("domain_rank", array("export_columns"=>"Dn,Rk,Or,Ot,Oc,Ad,At,Ac")));
+
+If you are unfamiliar with what SEMRush can do, please see my full [SEMRush review](http://slickwp.com/semrush-review) here.
+
+
 
